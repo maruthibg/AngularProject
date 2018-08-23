@@ -9,6 +9,9 @@ import { ProductService } from '../shared/services/product.service';
 })
 export class ManageComponent implements OnInit {
   mgProducts:Product[] = [];
+  myDate = new Date();
+  queryString = "";
+  
   constructor(private psvc:ProductService) { }
 
   ngOnInit() {
