@@ -1,0 +1,14 @@
+<h4>Shopping items</h4>
+<div class="card-columns">
+  <div class="card" *ngFor="let product of products">
+      <div class="card-header bg-warning">
+        <b> {{ product.name }}</b>
+      </div>
+      <div class="card-body">
+        Price : {{ product.price }}<br> {{ product.description }}
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" (click)="addToCart(product)">Add to cart</button>
+      </div>
+    </div>
+</div>

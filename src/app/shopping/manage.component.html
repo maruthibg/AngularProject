@@ -1,0 +1,19 @@
+<h4>Manage Products</h4>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngIf="mgProducts.length == 0">
+    <th colspan="4">No Products found.</th>
+  </tr>
+  <tr *ngFor="let product of mgProducts">
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.description }}</td>
+  </tr>
+</table>

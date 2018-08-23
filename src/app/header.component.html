@@ -1,0 +1,26 @@
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+    <a href="#" class="navbar-brand">
+        <img src="assets/images/angular-logo.png" style="width:120px;height:30px;" >
+        &nbsp;{{appTitle}}
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/signin">Sign in</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Quick Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/list">Shopping list</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/manage">Manage Products</a>
+        </li>
+    </ul>
+    <span class="navbar-text text-white">
+        Welcome <b>{{showUserName()}}</b>
+    </span>
+</nav>
