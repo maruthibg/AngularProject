@@ -10,4 +10,13 @@ export class CategoryService {
     getCategories() {
         return this.http.get<Category[]>(this.restUrl)
     }
+    addCategory(newcategory:Category) {
+        return this.http.post<Category>(this.restUrl, newcategory)
+    }
+    deleteCategory(id:number){
+        return this.http.delete(this.restUrl+"/"+id)
+    }
+    updateCategory(modifiedCategory:Category) {
+        return this.http.put<Category>(this.restUrl+"/"+modifiedCategory.id, modifiedCategory)
+    }
 }

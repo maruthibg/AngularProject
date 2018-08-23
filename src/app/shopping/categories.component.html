@@ -1,11 +1,21 @@
 <h4>Categories List</h4>
+<form action="">
+  <input type="text" placeholder="Category Id" readonly name="txtId" [(ngModel)]="frmCategory.id">
+  <input type="text" placeholder="Enter Category Name" name="txtName" [(ngModel)]="frmCategory.name">
+  <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+  <button type="button" class="btn btn-info" (click)="update()">Update</button>
+</form>
 <table class="table table-bordered">
   <tr>
-    <td>Id</td><td>Name</td>
+    <th>Id</th><th>Name</th><th>Action</th>
   </tr>
   <tr *ngFor="let ctg of categories">
     <td>{{ ctg.id }}</td>
     <td>{{ ctg.name }}</td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(ctg.id)">Delete</button>
+      <button class="btn btn-success" (click)="edit(ctg)">Edit</button>
+    </td>
   </tr>
   <tr *ngIf="categories.length == 0">
     <th colspan="3">Nothing Found</th> 

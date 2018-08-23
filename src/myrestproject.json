@@ -1,0 +1,31 @@
+{
+  "wscategories": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    }
+  ],
+  "wsproducts": [
+    {
+      "id": 1,
+      "name": "Galaxy",
+      "price": 60000,
+      "description": "Samsung Mobile",
+      "ctgid": 1
+    },
+    {
+      "id": 2,
+      "name": "Xperia",
+      "price": 85000,
+      "description": "Sony Mobile",
+      "ctgid": 1
+    },
+    {
+      "id": 3,
+      "name": "Dell",
+      "price": 150000,
+      "description": "Dell vostro",
+      "ctgid": 2
+    }
+  ]
+}
