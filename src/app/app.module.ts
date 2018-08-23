@@ -6,6 +6,7 @@ import { LoginModule } from "./login/login.module";
 import { ShoppingModule } from "./shopping/shopping.module";
 import { HomeComponent, NotFoundComponent, ListComponent } from "./menulinks.components";
 import { RouterModule } from "@angular/router"
+import { HttpClientModule } from "@angular/common/http"
 
 let appRoutes = [
     {path:"", component: HomeComponent},
@@ -17,7 +18,7 @@ let appRoutes = [
     // Register components
     declarations: [AppComponent, HeaderComponent, HomeComponent, ListComponent, NotFoundComponent],
     // Module dependencies
-    imports : [BrowserModule, LoginModule, ShoppingModule, RouterModule.forRoot(appRoutes)],
+    imports : [BrowserModule, LoginModule, ShoppingModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
     // Startup component
     bootstrap : [AppComponent]
 })
