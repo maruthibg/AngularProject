@@ -12,7 +12,8 @@ export class ManageComponent implements OnInit {
   constructor(private psvc:ProductService) { }
 
   ngOnInit() {
-    this.mgProducts = this.psvc.getProducts()
+    //this.mgProducts = this.psvc.getProducts()
+    this.psvc.getProducts().subscribe(data => this.mgProducts=data, err => console.log("Error ", err))
   }
 
 }

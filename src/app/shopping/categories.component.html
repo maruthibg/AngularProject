@@ -1,3 +1,13 @@
-<p>
-  categories works!
-</p>
+<h4>Categories List</h4>
+<table class="table table-bordered">
+  <tr>
+    <td>Id</td><td>Name</td>
+  </tr>
+  <tr *ngFor="let ctg of categories">
+    <td>{{ ctg.id }}</td>
+    <td>{{ ctg.name }}</td>
+  </tr>
+  <tr *ngIf="categories.length == 0">
+    <th colspan="3">Nothing Found</th> 
+  </tr>
+</table>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../shared/services/category.service';
+import { Category } from '../models/category.model';
 
 @Component({
   selector: 'app-categories',
@@ -7,6 +8,7 @@ import { CategoryService } from '../shared/services/category.service';
   styles: []
 })
 export class CategoriesComponent implements OnInit {
+  categories:Category[] = []
 
   constructor(private ctgsvc:CategoryService) { }
 
@@ -14,6 +16,7 @@ export class CategoriesComponent implements OnInit {
     this.ctgsvc.getCategories().subscribe(
       (data) => {
         console.log("Get Success", data)
+        this.categories = data
       }, (err) => {
         console.log("Get Error", err)
       }

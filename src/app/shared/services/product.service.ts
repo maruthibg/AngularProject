@@ -8,6 +8,6 @@ export class ProductService {
     constructor(private http:HttpClient) { }
     restUrl = "http://localhost:3000/wsproducts"
     getProducts() {
-        return this.productsData;
+        return this.http.get<Product[]>(this.restUrl)
     }
 }
